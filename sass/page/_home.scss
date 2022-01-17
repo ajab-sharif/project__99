@@ -1,0 +1,151 @@
+//
+.section__info {
+  background: $clrLightGrayishBlue;
+  padding: 9rem 0 4rem 0;
+  @include respond(tab-port) {
+    & > .container {
+      text-align: center;
+    }
+    & p {
+      width: 80%;
+      margin: 0px auto 5rem auto;
+    }
+  }
+  @include respond(phone-lands) {
+    & > .container {
+      text-align: left !important;
+    }
+    & p {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+  @include respond(tab-port) {
+    & > .container {
+      text-align: center;
+    }
+    & p {
+      width: 100%;
+      margin: 0px auto 5rem auto;
+    }
+  }
+}
+.info {
+  @include respond(tab-port) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  @include respond(phone-lands) {
+    grid-template-columns: 1fr;
+  }
+
+  &__text {
+    width: 60%;
+  }
+  display: flex;
+  &__content {
+    &:not(:last-of-type) {
+      padding-right: 3.5rem;
+    }
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      padding: 1rem 3rem;
+      font-size: 1.8rem;
+    }
+    @include respond(phone-lands) {
+      padding: 0rem;
+    }
+    padding-top: 3rem;
+    font-size: $font-sm;
+  }
+  &__icon {
+    & > img {
+      height: 7.3rem;
+      width: 7.3rem;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 4rem;
+    }
+  }
+  @include respond(tab-lands) {
+    &__icon > img {
+      height: 9rem;
+      width: 9rem;
+      margin: 2rem 0;
+    }
+  }
+  @include respond(tab-port) {
+    &__icon > img {
+      margin: 2rem auto !important;
+    }
+  }
+}
+.sub--headding {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: $clrDarkBlue;
+  @include respond(tab-port) {
+    font-size: 3rem;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.section__articles {
+  padding: 9rem 0 7rem 0;
+  background: $clrVeryLightGray;
+}
+.articles {
+  &__content--box {
+    display: flex;
+    @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2.5rem;
+    }
+    @include respond(phone-lands) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__content {
+    width: 100%;
+    margin: 1.3rem 0;
+    overflow: hidden;
+    border-radius: 7px;
+    &:not(:last-of-type) {
+      margin-right: 3rem;
+    }
+    &--details {
+      padding: 2.3rem 2rem;
+      background: $clrWhite;
+    }
+  }
+  &__owner {
+    font-size: 1rem;
+    @include respond(tab-lands) {
+      font-size: 1.3rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 20rem;
+    display: block;
+    @include respond(tab-port) {
+      height: 20vw;
+    }
+    @include respond(phone-lands) {
+      height: 50vw;
+    }
+  }
+  &__text {
+    font-size: $font-sm;
+    line-height: 1.5;
+    @include respond(tab-lands) {
+      font-size: 2rem;
+    }
+  }
+}

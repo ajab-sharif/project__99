@@ -1,0 +1,47 @@
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-js-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}
+.headding--primary {
+  @include heading-1;
+  @include respond(tab-port) {
+    font-size: 5rem;
+  }
+}
+.headding--secondary {
+  font-weight: 400;
+  color: $clrDarkBlue;
+  font-size: 4rem;
+  @include respond(tab-port) {
+    text-align: center;
+  }
+}
+.headding--tertiary {
+  font-weight: 400;
+  font-size: $font-md;
+  color: $clrDarkBlue;
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+}
+
+////////////////@
+// utilitiys
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3.3rem;
+}
+.defult--text {
+  line-height: 2.8rem;
+}

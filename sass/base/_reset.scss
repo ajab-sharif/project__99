@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  @include respond(laptop-mini) {
+    font-size: 50.25%;
+  }
+}
+body {
+  line-height: 1.3;
+  font-size: $font-md;
+  font-family: $font-family-pub;
+  font-weight: 300;
+  color: $clrGrayishBlue;
+  overflow-x: hidden !important;
+  @include respond(tab-port) {
+    font-size: $font-md-mbl;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  transform: translateX(4.5rem);
+  @include respond(laptop-mini) {
+    transform: translateX(0);
+    padding: 0 3rem;
+  }
+}
+a,
+a:link,
+a:visited {
+  text-decoration-line: none;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+}
+button,
+.button {
+  border-radius: 40px;
+  display: inline-block;
+  cursor: pointer;
+  color: $clrWhite;
+  font-weight: 400;
+  background: linear-gradient(to right, $clrLimeGreen, $clrBrightCyan);
+  border: 0;
+  padding: 1.3rem 3.3rem;
+  font-size: $font-sm;
+}

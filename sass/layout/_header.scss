@@ -1,0 +1,88 @@
+.header {
+  background: $clrVeryLightGray;
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 8rem;
+    & img {
+      width: 14rem;
+      height: 2.2rem;
+    }
+  }
+  &__hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    padding-bottom: 18.2rem;
+    @include respond(laptop-mini) {
+      padding-bottom: 0rem !important;
+    }
+    @include respond(tab-lands) {
+      grid-column: 1fr;
+      grid-template-rows: 2, fr;
+    }
+    @include respond(phone-lands) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 50rem 60rem;
+    }
+    @include respond(phone-port) {
+      grid-template-rows: 50rem 70rem;
+    }
+  }
+  &__hero-img {
+    position: absolute;
+    top: -122px;
+    left: 87px;
+    width: 76rem;
+    height: 92rem;
+    z-index: 3;
+    @include respond(phone-lands) {
+      top: -26rem;
+      left: 4.3rem;
+    }
+  }
+  &__hero--box {
+    position: relative;
+    @include respond(laptop-mini) {
+      left: -10rem;
+      top: 125px;
+      transform: scale(0.8);
+    }
+  }
+  &__box--bg {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    transform: scale(2.2);
+    left: 250px;
+    @include respond(phone-lands) {
+      top: -33rem;
+      left: 8rem;
+    }
+  }
+  &__left {
+    padding-right: 10rem;
+    position: relative;
+    @include respond(phone-lands) {
+      padding: 0;
+      position: static !important;
+      grid-row: 2/3;
+      text-align: center;
+    }
+    &--cta {
+      margin-top: 15rem;
+    }
+    @include respond(tab-lands) {
+      padding-right: 0rem;
+      &--cta {
+        margin-top: 20rem;
+      }
+    }
+  }
+  &__right {
+    @include respond(phone-lands) {
+      grid-row: 1/2;
+    }
+  }
+  //////////////////////////////////@include
+}
